@@ -65,7 +65,8 @@ function(){
     let roleUser = document.getElementById("role").value;
     let imageUser = document.getElementById("image").value;
     console.log(nomeUser, roleUser, imageUser);
-// dopo esserci salvati i valori buttati dentro dall'utente dobbiamo creare un oggetto e poi buttarlo dentro all'array 
+    
+// dopo esserci salvati i valori buttati dentro dall'utente dobbiamo metterli dentro al card-conteiner con un inner.html
     let nuovoMembro = {
         "image": imageUser,
         "nome": nomeUser,
