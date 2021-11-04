@@ -12,29 +12,29 @@ let memberTeamArray = [
         "ruolo" : "Founder & CEO"
     },
     {
-        "image": "img/wayne-barnett-founder-ceo.jpg",
-        "nome": "Wayne Barnett",
-        "ruolo" : "Founder & CEO"
+        "image": "img/angela-caroll-chief-editor.jpg",
+        "nome": "Angela Caroll",
+        "ruolo" : "Chief Editor"
     },
     {
-        "image": "img/wayne-barnett-founder-ceo.jpg",
-        "nome": "Wayne Barnett",
-        "ruolo" : "Founder & CEO"
+        "image": "img/walter-gordon-office-manager.jpg",
+        "nome": "Walter Gordon",
+        "ruolo" : "Office Manager"
     },
     {
-        "image": "img/wayne-barnett-founder-ceo.jpg",
-        "nome": "Wayne Barnett",
-        "ruolo" : "Founder & CEO"
+        "image": "img/angela-lopez-social-media-manager.jpg",
+        "nome": "Angela Lopez",
+        "ruolo" : "Social Media Menager"
     },
     {
-        "image": "img/wayne-barnett-founder-ceo.jpg",
-        "nome": "Wayne Barnett",
-        "ruolo" : "Founder & CEO"
+        "image": "img/scott-estrada-developer.jpg",
+        "nome": "Scott Estrada",
+        "ruolo" : "Developer"
     },
     {
-        "image": "img/wayne-barnett-founder-ceo.jpg",
-        "nome": "Wayne Barnett",
-        "ruolo" : "Founder & CEO"
+        "image": "img/barbara-ramos-graphic-designer.jpg",
+        "nome": "Barbara Ramos",
+        "ruolo" : "Graphic Designer"
     }
 ]
 
@@ -57,9 +57,36 @@ for(let i = 0; i < 6; i++){
 }
 
 
-// for (let key in memberTeamArray){
-//     console.log(memberTeamArray[key]);
+//ora al click dell pulsante devo prendermi i tre dati inseriti dall'utente e li devo mettere nei rispettivi posti dell'oggetto nuovo che si andrà a creare
+const bottoneAdd = document.getElementById("addMemberButton")
+bottoneAdd.addEventListener("click",
+function(){
+    let nomeUser = document.getElementById("name").value;
+    let roleUser = document.getElementById("role").value;
+    let imageUser = document.getElementById("image").value;
+    console.log(nomeUser, roleUser, imageUser);
+// dopo esserci salvati i valori buttati dentro dall'utente dobbiamo creare un oggetto e poi buttarlo dentro all'array 
+    let nuovoMembro = {
+        "image": imageUser,
+        "nome": nomeUser,
+        "ruolo" : roleUser
+    }
+    containerCard.innerHTML +=`
+    <div class="team-card">
+                <div class="card-image">
+                  <img
+                    src="${nuovoMembro.image}"
+                    alt=""
+                  />
+                </div>
+                <div class="card-text">
+                  <h3>${nuovoMembro.nome}</h3>
+                  <p>${nuovoMembro.ruolo}</p>
+                </div>
+              </div>`
 
-// }
+}
+
+)
 
 
